@@ -1,0 +1,90 @@
+name: Update Blog Posts
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Every day at 8:00 UTC (16:00 CST)
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest blog posts
+        id: fetch
+        run: |
+          # Fetch latest 5 published articles from blog API
+          ARTICLES=$(curl -s "https://www.777196.xyz/api/v1/articles?page=1&page_size=5&is_publish=true" 2>/dev/null)
+
+          if [ -z "$ARTICLES" ] || echo "$ARTICLES" | grep -q '"error":true'; then
+            echo "API unavailable, skipping update"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Build the blog list markdown
+          BLOG_LIST=$(echo "$ARTICLES" | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          articles = data.get('data', {}).get('list', [])
+          for a in articles[:5]:
+              title = a.get('title', 'Untitled')
+              url = a.get('url', '')
+              date = a.get('publish_time', '')[:10]
+              if url:
+                  print(f'- [{title}](https://www.777196.xyz{url}) · {date}')
+              else:
+                  print(f'- {title} · {date}')
+          ")
+
+          if [ -n "$BLOG_LIST" ]; then
+            # Write to output file
+            echo "$BLOG_LIST" > /tmp/blog_list.md
+            echo "skip=false" >> $GITHUB_OUTPUT
+          else
+            echo "No articles found, skipping"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update README
+        if: steps.fetch.outputs.skip == 'false'
+        run: |
+          BLOG_LIST=$(cat /tmp/blog_list.md)
+
+          # Replace the section between markers
+          python3 << 'PYEOF'
+          import os
+
+          with open('README.md', 'r') as f:
+              content = f.read()
+
+          blog_list = open('/tmp/blog_list.md').read().strip()
+
+          # Find and replace between markers
+          start_marker = '<!-- BLOG-POST-LIST:START -->'
+          end_marker = '<!-- BLOG-POST-LIST:END -->'
+
+          if start_marker in content and end_marker in content:
+              before = content[:content.index(start_marker) + len(start_marker)]
+              after = content[content.index(end_marker):]
+              new_content = f'{before}\n{blog_list}\n{after}'
+              with open('README.md', 'w') as f:
+                  f.write(new_content)
+              print(f"Updated blog list with {blog_list.count(chr(10)) + 1} articles")
+          else:
+              print("Markers not found, skipping")
+          PYEOF
+
+      - name: Commit and push
+        if: steps.fetch.outputs.skip == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📝 Update blog posts from RSS"
+            git push
+          fi
