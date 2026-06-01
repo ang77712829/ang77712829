@@ -42,9 +42,10 @@
 
 <div align="center">
 
-![ang77712829's GitHub stats](https://github-readme-stats.vercel.app/api?username=ang77712829&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ang77712829&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
+![Stars](https://img.shields.io/badge/dynamic/json?label=⭐Stars&query=%24.stargazers_count&url=https://api.github.com/repos/ang77712829/AngeVoice&color=f97316&style=flat-square)
+![Forks](https://img.shields.io/badge/dynamic/json?label=🍴Forks&query=%24.forks_count&url=https://api.github.com/repos/ang77712829/AngeVoice&color=3b82f6&style=flat-square)
+![Repos](https://img.shields.io/badge/dynamic/json?label=📦Repos&query=%24.public_repos&url=https://api.github.com/users/ang77712829&color=8b5cf6&style=flat-square)
+![Followers](https://img.shields.io/badge/dynamic/json?label=👥Followers&query=%24.followers&url=https://api.github.com/users/ang77712829&color=10b981&style=flat-square)
 
 </div>
 
@@ -52,7 +53,13 @@
 
 ### 🔥 Featured Projects
 
-[![AngeVoice](https://github-readme-stats.vercel.app/api/pin/?username=ang77712829&repo=AngeVoice&theme=tokyonight&hide_border=true)](https://github.com/ang77712829/AngeVoice)
+<div align="center">
+
+[![AngeVoice](https://img.shields.io/badge/AngeVoice-Lightweight%20Chinese%20TTS-blue?style=for-the-badge&logo=github)](https://github.com/ang77712829/AngeVoice)
+
+*Kokoro v1.1 · OpenAI API · WebSocket 流式 · Docker 部署*
+
+</div>
 
 ---
 
