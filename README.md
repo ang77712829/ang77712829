@@ -42,30 +42,23 @@
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=ang77712829&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=ang77712829&theme=tokyonight&hide_border=true" />
+![ang77712829's GitHub stats](https://github-readme-stats.vercel.app/api?username=ang77712829&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ang77712829&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
 
 </div>
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ang77712829&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-
-</div>
-
----
-
-### 🐍 Contribution Graph
-
-![ang77712829's github activity](https://github-readme-activity-graph.vercel.app/graph?username=ang77712829&theme=tokyonight&hide_border=true&bg_color=0d1117&color=58a6ff)
 
 ---
 
 ### 🔥 Featured Projects
 
-<a href="https://github.com/ang77712829/AngeVoice">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=ang77712829&repo=AngeVoice&theme=tokyonight&hide_border=true" />
-</a>
+[![AngeVoice](https://github-readme-stats.vercel.app/api/pin/?username=ang77712829&repo=AngeVoice&theme=tokyonight&hide_border=true)](https://github.com/ang77712829/AngeVoice)
+
+---
+
+### 📈 Activity
+
+![ang77712829's github activity](https://github-readme-activity-graph.vercel.app/graph?username=ang77712829&theme=tokyonight&hide_border=true&bg_color=0d1117&color=58a6ff)
 
 ---
 
@@ -73,9 +66,7 @@
 
 ### 📝 Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->
 *正在通过 RSS 自动同步...*
-<!-- BLOG-POST-LIST:END -->
 
 🌐 **[AngeBLOG](https://www.777196.xyz)** — 记录 AI、自托管、硬件折腾与开源项目的成长过程
 
