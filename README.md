@@ -71,11 +71,11 @@
 ### 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Agent 用着用着就“流口水”了？聊聊配置管理、记忆瘦身和 AGENTS.md](https://www.777196.xyz/posts/agent-stability-guide-20260619) · 2026-06-18
 - [给 AI Agent 接上文生图：本地 OpenAI-compatible 图片网关 + 自动选模型 + 提示词增强](https://www.777196.xyz/posts/ai-agent-image-proxy-gateway-prompt-routing) · 2026-06-02
 - [AngeVoice：一个支持三种引擎的自托管 TTS 平台](https://www.777196.xyz/posts/5461hhbf) · 2026-05-25
 - [Embedding 模型是什么：以 Qwen3-Embedding 与 pgvector 为例](https://www.777196.xyz/posts/embedding-models-deep-dive-20260523) · 2026-05-23
 - [Docker 容器健康检查：识别服务异常与配合恢复策略](https://www.777196.xyz/posts/docker-healthcheck-practice-20260522) · 2026-05-22
-- [GitHub Actions CI/CD 示例：构建 Docker 镜像并部署到 VPS](https://www.777196.xyz/posts/github-actions-cicd-docker-deploy-20260521) · 2026-05-21
 <!-- BLOG-POST-LIST:END -->
 
 🌐 **[AngeBLOG](https://www.777196.xyz)** — 记录 AI、自托管、硬件折腾与开源项目的成长过程
