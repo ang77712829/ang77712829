@@ -51,7 +51,7 @@
 
 [![AngeVoice](https://img.shields.io/badge/AngeVoice-Lightweight%20Chinese%20TTS-blue?style=for-the-badge&logo=github)](https://github.com/ang77712829/AngeVoice)
 
-*Kokoro v1.1 · OpenAI API · WebSocket 流式 · Docker 部署*
+* · OpenAI API · WebSocket 流式 · Docker 部署*
 
 </div>
 
