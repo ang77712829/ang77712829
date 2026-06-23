@@ -2,58 +2,96 @@
 
 # 安歌 · Ange
 
-把本地 AI 工具、自托管服务和家用硬件，慢慢拧成能长期运行、方便维护、也真正好用的小系统。
+把本地 AI 工具、自托管服务和家用硬件，慢慢拧成能长期运行、方便维护、真正派得上用场的小系统。
 
-<a href="https://www.777196.xyz">AngeBLOG</a> ·
-<a href="https://github.com/ang77712829/AngeVoice">AngeVoice</a>
+<p>
+  <a href="https://github.com/ang77712829/AngeVoice"><img src="https://img.shields.io/badge/AngeVoice-轻量中文%20TTS-0969da?style=flat-square&labelColor=24292f" alt="AngeVoice" /></a>
+  <a href="https://www.777196.xyz"><img src="https://img.shields.io/badge/文章记录-AI%20%2F%20自托管%20%2F%20踩坑笔记-6e7781?style=flat-square&labelColor=24292f" alt="文章记录" /></a>
+</p>
+
+<sub>Local-first AI · Self-hosted services · Homelab hardware · Notes from the pit</sub>
 
 </div>
 
 ---
 
-### 正在折腾
+## 🧭 正在折腾
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <strong>🗣️ AngeVoice</strong><br>
-      轻量中文 TTS / OpenAI-compatible API / WebSocket 流式 / Docker 部署。<br><br>
-      <sub>当前重点：中文文本前端、词典、多音字、批量合成，以及更稳的本地部署体验。</sub>
+      <h3>🗣️ AngeVoice</h3>
+      <p>
+        轻量中文 TTS 服务，兼容 OpenAI Audio API，支持 WebSocket 流式合成和 Docker 部署。
+      </p>
+      <p>
+        <sub>当前重点：中文文本前端、词典、多音字处理、批量合成，以及更稳定的 NAS / 小主机本地部署体验。</sub>
+      </p>
     </td>
     <td width="50%" valign="top">
-      <strong>🧩 AI 工具链与自托管</strong><br>
-      把 Agent、图片网关、NAS 服务、本地模型和日常工作流接到一起。<br><br>
-      <sub>关注点：稳定性、低成本、可维护配置，以及踩坑后能留下复用经验。</sub>
+      <h3>🧩 AI 工具链与自托管</h3>
+      <p>
+        把 Agent、图片网关、NAS 服务、本地模型和日常工作流接到一起，减少重复配置和无效折腾。
+      </p>
+      <p>
+        <sub>关注点：稳定性、低成本、可维护配置、故障恢复，以及踩坑后能留下复用经验。</sub>
+      </p>
     </td>
   </tr>
 </table>
 
-### 常用技术
+## 🧱 常用技术
 
-`Python` · `FastAPI` · `Docker` · `Linux` · `Nginx` · `SQLite / PostgreSQL` · `Node.js` · `Vue` · `OpenAI-compatible API`
+<table>
+  <tr>
+    <td valign="top" width="33%">
+      <strong>Backend</strong><br><br>
+      <code>Python</code> <code>FastAPI</code><br>
+      <code>SQLite</code> <code>PostgreSQL</code><br>
+      <code>OpenAI-compatible API</code>
+    </td>
+    <td valign="top" width="33%">
+      <strong>Infra</strong><br><br>
+      <code>Docker</code> <code>Linux</code><br>
+      <code>Nginx</code> <code>NAS</code><br>
+      <code>Self-hosted</code>
+    </td>
+    <td valign="top" width="33%">
+      <strong>AI / Product</strong><br><br>
+      <code>TTS</code> <code>WebSocket</code><br>
+      <code>Agent Workflow</code><br>
+      <code>Local Model</code>
+    </td>
+  </tr>
+</table>
 
-### 代表项目
+## 🔧 代表项目
 
 <table>
   <tr>
     <td valign="top">
-      <a href="https://github.com/ang77712829/AngeVoice"><strong>AngeVoice</strong></a><br>
-      一个面向本地部署的轻量 TTS 服务，目标是让中文语音合成在 NAS、小主机和家庭服务器上也能稳定可用。
-      <br><br>
-      <code>Chinese TTS</code> <code>OpenAI API</code> <code>WebSocket</code> <code>Docker</code> <code>Self-hosted</code>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://www.777196.xyz"><strong>AngeBLOG</strong></a><br>
-      记录 AI Agent、自托管服务、硬件折腾和开源项目从可用到稳定的过程。
-      <br><br>
-      <code>AI Tools</code> <code>Homelab</code> <code>Open Source</code> <code>Notes from the pit</code>
+      <h3>
+        <a href="https://github.com/ang77712829/AngeVoice">AngeVoice</a>
+        <sub>主项目</sub>
+      </h3>
+      <p>
+        一个面向本地部署的轻量 TTS 服务。目标不是堆功能，而是让中文语音合成在 NAS、小主机和家庭服务器上也能稳定可用、方便接入、长期维护。
+      </p>
+      <p>
+        <code>Chinese TTS</code>
+        <code>OpenAI API</code>
+        <code>WebSocket</code>
+        <code>Docker</code>
+        <code>Self-hosted</code>
+      </p>
+      <p>
+        <sub>方向：流式合成 · API 兼容 · 轻量部署 · 可扩展词典 · 批量合成</sub>
+      </p>
     </td>
   </tr>
 </table>
 
-### 最近写的
+## ✍️ 最近写的
 
 <!-- BLOG-POST-LIST:START -->
 - [Agent 用着用着就“流口水”了？聊聊配置管理、记忆瘦身和 AGENTS.md](https://www.777196.xyz/posts/agent-stability-guide-20260619) · 2026-06-18
@@ -63,11 +101,23 @@
 - [Docker 容器健康检查：识别服务异常与配合恢复策略](https://www.777196.xyz/posts/docker-healthcheck-practice-20260522) · 2026-05-22
 <!-- BLOG-POST-LIST:END -->
 
+<p>
+  <a href="https://www.777196.xyz">查看更多记录 →</a>
+</p>
+
+---
+
 <details>
-  <summary>GitHub Activity</summary>
+  <summary>📈 GitHub Activity</summary>
 
   <br>
 
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ang77712829&theme=github-compact&hide_border=true" alt="ang77712829's GitHub activity graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ang77712829&theme=github-compact&hide_border=true&area=true" alt="ang77712829's GitHub activity graph" />
 
 </details>
+
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=ang77712829&color=6e7781&style=flat-square&label=Profile+Views)
+
+</div>
