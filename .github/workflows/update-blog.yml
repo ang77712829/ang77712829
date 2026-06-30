@@ -18,10 +18,38 @@ jobs:
         id: fetch
         run: |
           # Fetch latest 5 published articles from blog API
-          ARTICLES=$(curl -s "https://www.777196.xyz/api/v1/articles?page=1&page_size=5&is_publish=true" 2>/dev/null)
+          # --retry: 3 attempts with exponential backoff
+          # --retry-connrefused: retry on connection refused
+          # --retry-all-errors: retry on HTTP 5xx and other transient errors
+          # -A: User-Agent to avoid Cloudflare empty-UA blocking
+          # --max-time: 15s timeout per attempt
+          ARTICLES=$(curl -s --retry 3 --retry-delay 2 --retry-connrefused --retry-all-errors \
+            --max-time 15 \
+            -A "github-actions-bot/1.0" \
+            "https://www.777196.xyz/api/v1/articles?page=1&page_size=5&is_publish=true")
 
-          if [ -z "$ARTICLES" ] || echo "$ARTICLES" | grep -q '"error":true'; then
-            echo "API unavailable, skipping update"
+          if [ -z "$ARTICLES" ]; then
+            echo "API returned empty response, skipping update"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Validate JSON before processing
+          if ! echo "$ARTICLES" | python3 -c "import json,sys; json.load(sys.stdin)" 2>/dev/null; then
+            echo "API returned non-JSON response (first 200 chars): ${ARTICLES:0:200}"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Check for error response
+          if echo "$ARTICLES" | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          sys.exit(0 if data.get('code', -1) == 0 else 1)
+          " 2>/dev/null; then
+            : # API returned success
+          else
+            echo "API returned error response, skipping"
             echo "skip=true" >> $GITHUB_OUTPUT
             exit 0
           fi
