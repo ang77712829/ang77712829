@@ -5,11 +5,11 @@
 把本地 AI 工具、自托管服务和家用硬件，慢慢拧成能长期运行、方便维护、真正派得上用场的小系统。
 
 <p>
-  <a href="https://github.com/ang77712829/AngeVoice"><img src="https://img.shields.io/badge/AngeVoice-轻量中文%20TTS-0969da?style=flat-square&labelColor=24292f" alt="AngeVoice" /></a>
+  <a href="https://github.com/angevox/AngeVoice"><img src="https://img.shields.io/badge/AngeVoice-轻量中文%20TTS-0969da?style=flat-square&labelColor=24292f" alt="AngeVoice" /></a>
   <a href="https://www.777196.xyz"><img src="https://img.shields.io/badge/文章记录-AI%20%2F%20自托管%20%2F%20踩坑笔记-6e7781?style=flat-square&labelColor=24292f" alt="文章记录" /></a>
 </p>
 
-<sub>Local-first AI · Self-hosted services · Homelab hardware · Notes from the pit</sub>
+<sub>本地优先的人工智能·自托管服务·家庭实验室硬件·来自现场的笔记</sub>
 
 </div>
 
@@ -17,8 +17,8 @@
 
 ## 🧭 正在折腾
 
-<table>
-  <tr>
+<表格>
+  <行>
     <td width="50%" valign="top">
       <h3>🗣️ AngeVoice</h3>
       <p>
@@ -27,7 +27,7 @@
       <p>
         <sub>当前重点：中文文本前端、词典、多音字处理、批量合成，以及更稳定的 NAS / 小主机本地部署体验。</sub>
       </p>
-    </td>
+    </单元格>
     <td width="50%" valign="top">
       <h3>🧩 AI 工具链与自托管</h3>
       <p>
@@ -36,26 +36,26 @@
       <p>
         <sub>关注点：稳定性、低成本、可维护配置、故障恢复，以及踩坑后能留下复用经验。</sub>
       </p>
-    </td>
+    </单元格>
   </tr>
 </table>
 
 ## 🧱 常用技术
 
-<table>
-  <tr>
+<表格>
+  <行>
     <td valign="top" width="33%">
       <strong>Backend</strong><br><br>
       <code>Python</code> <code>FastAPI</code><br>
       <code>SQLite</code> <code>PostgreSQL</code><br>
       <code>OpenAI-compatible API</code>
-    </td>
+    </单元格>
     <td valign="top" width="33%">
       <strong>Infra</strong><br><br>
       <code>Docker</code> <code>Linux</code><br>
       <code>Nginx</code> <code>NAS</code><br>
       <code>Self-hosted</code>
-    </td>
+    </单元格>
     <td valign="top" width="33%">
       <strong>AI / Product</strong><br><br>
       <code>TTS</code> <code>WebSocket</code><br>
@@ -71,7 +71,7 @@
   <tr>
     <td valign="top">
       <h3>
-        <a href="https://github.com/ang77712829/AngeVoice">AngeVoice</a>
+        <a href="https://github.com/angevox/AngeVoice">AngeVoice</a>
         <sub>主项目</sub>
       </h3>
       <p>
@@ -112,12 +112,12 @@
 
   <br>
 
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ang77712829&theme=github-compact&hide_border=true&area=true" alt="ang77712829's GitHub activity graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=angevox&theme=github-compact&hide_border=true&area=true" alt="angevox's GitHub activity graph" />
 
 </details>
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=ang77712829&color=6e7781&style=flat-square&label=Profile+Views)
+![Profile Views](https://komarev.com/ghpvc/?username=angevox&color=6e7781&style=flat-square&label=Profile+Views)
 
 </div>
